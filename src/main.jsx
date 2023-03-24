@@ -4,8 +4,8 @@ import { ThemeProvider } from '@mui/material/styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import theme from './lib/theme'
 import './index.css'
-import Homepage from './pages/Homepage'
-import About from './pages/About'
+import Blogs from './pages/Blogs'
+import Blog from './pages/Bolg'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement)
@@ -13,11 +13,11 @@ const root = createRoot(rootElement)
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Homepage />
+    element: <Blogs />
   },
   {
-    path: '/about',
-    element: <About />
+    path: '/:id',
+    element: <Blog />
   }
 ])
 
